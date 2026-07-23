@@ -1,0 +1,10 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="8" width="44" height="44" rx="12" fill="#0F5C81"></rect>
+  <path d="M18 30H34M26 22V38" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+  <text x="62" y="31" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#0F5C81">
+    MEDİSU
+  </text>
+  <text x="62" y="49" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748B">
+    Evde Bakım ve Sağlık Hizmetleri
+  </text>
+</svg>
