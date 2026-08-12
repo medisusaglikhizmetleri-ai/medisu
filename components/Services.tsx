@@ -58,8 +58,6 @@ const services = [
       "Ameliyat sonrası veya bakım ihtiyacı olan hastalar için profesyonel destek.",
   },
 
-  // YENİ HİZMETLER
-
   {
     title: "Glutatyon Tedavisi",
     slug: "glutatyon-tedavisi",
@@ -91,6 +89,17 @@ const services = [
     position: "center",
     description:
       "NAD+ intravenöz uygulamasının uygunluk değerlendirmesi sonrasında sağlık personeli tarafından ev ortamında gerçekleştirilmesi.",
+  },
+
+  // MOUNJARO
+
+  {
+    title: "Mounjaro Tedavisi",
+    slug: "mounjaro-tedavisi",
+    image: "/images/services/mounjaro.png",
+    position: "center",
+    description:
+      "Hekim değerlendirmesi ve reçetelendirmesi doğrultusunda Mounjaro (tirzepatid) tedavi sürecine yönelik profesyonel sağlık desteği.",
   },
 ];
 

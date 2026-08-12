@@ -20,6 +20,7 @@ const services = [
   ["Pascorbin Tedavisi", "pascorbin-tedavisi"],
   ["Todavit Multivitamin", "todavit-multivitamin"],
   ["NAD+ Tedavisi", "nad-plus-tedavisi"],
+  ["Mounjaro Tedavisi", "mounjaro-tedavisi"],
 ];
 
 export default function Footer() {

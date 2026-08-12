@@ -35,6 +35,7 @@ const districts = [
   "sisli",
   "sultanbeyli",
   "sultangazi",
+  "sile",
   "tuzla",
   "umraniye",
   "uskudar",
@@ -56,6 +57,7 @@ const allServices = [
   "pascorbin-tedavisi",
   "todavit-multivitamin",
   "nad-plus-tedavisi",
+  "mounjaro-tedavisi",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
