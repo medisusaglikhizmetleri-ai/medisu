@@ -41,13 +41,21 @@ const districts = [
   "zeytinburnu",
 ];
 
-const services = [
+const districtServices = [
   "evde-hemsire",
   "evde-serum",
   "pansuman",
   "kan-alma",
   "yasli-bakimi",
   "hasta-bakimi",
+];
+
+const allServices = [
+  ...districtServices,
+  "glutatyon-tedavisi",
+  "pascorbin-tedavisi",
+  "todavit-multivitamin",
+  "nad-plus-tedavisi",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -62,7 +70,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  services.forEach((service) => {
+  // Ana hizmet detay sayfaları
+  allServices.forEach((service) => {
     pages.push({
       url: `${baseUrl}/hizmetler/${service}`,
       lastModified: new Date(),
@@ -71,8 +80,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
+  // İstanbul ilçe + hizmet sayfaları
   districts.forEach((district) => {
-    services.forEach((service) => {
+    districtServices.forEach((service) => {
       pages.push({
         url: `${baseUrl}/istanbul/${district}/${service}`,
         lastModified: new Date(),

@@ -7,127 +7,84 @@ import {
   MessageCircle,
   ShieldCheck,
   Clock3,
-  HeartHandshake,
   CheckCircle2,
 } from "lucide-react";
 
 const features = [
-  "Lisanslı Sağlık Personeli",
-  "Steril ve Güvenli Uygulama",
-  "İstanbul Geneli Hizmet",
-  "7/24 Destek",
-];
-
-const stats = [
-  {
-    icon: HeartHandshake,
-    value: "1000+",
-    title: "Mutlu Hasta",
-  },
   {
     icon: ShieldCheck,
-    value: "%100",
-    title: "Hasta Memnuniyeti",
+    title: "Uzman Sağlık Personeli",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Steril ve Güvenli Uygulama",
   },
   {
     icon: Clock3,
-    value: "7/24",
-    title: "Destek",
+    title: "7/24 İletişim",
   },
 ];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+    <section
+      id="top"
+      className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50"
+    >
+      <div className="absolute -left-40 bottom-0 h-[360px] w-[360px] rounded-full bg-sky-100/60 blur-[120px]" />
+      <div className="absolute -right-40 top-0 h-[360px] w-[360px] rounded-full bg-cyan-100/60 blur-[120px]" />
 
-      <div className="absolute -left-40 -bottom-40 h-[500px] w-[500px] rounded-full bg-sky-100 blur-[140px]" />
-
-      <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-cyan-100 blur-[140px]" />
-
-      <div className="relative mx-auto flex max-w-7xl flex-col-reverse items-center gap-20 px-6 py-24 lg:flex-row">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-5 py-8 sm:px-6 sm:py-10 lg:grid-cols-2 lg:gap-16 lg:py-16">
 
         <motion.div
-          className="flex-1"
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: .7 }}
+          transition={{ duration: 0.55 }}
         >
-
-          <span className="inline-flex rounded-full bg-cyan-100 px-5 py-2 text-sm font-semibold text-cyan-700">
+          <span className="inline-flex rounded-full bg-cyan-100 px-3.5 py-2 text-[11px] font-semibold text-cyan-700 sm:px-4 sm:text-sm">
             İstanbul Geneli Evde Sağlık Hizmetleri
           </span>
 
-          <h1 className="mt-8 text-5xl font-extrabold leading-tight tracking-tight text-slate-900 lg:text-6xl">
-
+          <h1 className="mt-4 text-[38px] font-extrabold leading-[1.05] tracking-tight text-slate-950 sm:text-5xl lg:mt-5 lg:text-6xl">
             Sağlığınız
-
-            <br />
-
-            <span className="text-sky-700">
+            <span className="mt-1 block text-sky-700">
               Evinizin Konforunda
             </span>
-
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-
-            MEDİSU olarak İstanbul genelinde uzman hemşirelerimiz ile
-            evde hemşire, serum, pansuman, yaşlı bakımı ve profesyonel
-            sağlık hizmetlerini güvenle sunuyoruz.
-
+          <p className="mt-4 max-w-xl text-[15px] leading-6 text-slate-600 sm:text-lg sm:leading-8 lg:mt-5">
+            İstanbul genelinde evde hemşire, serum, pansuman, kan alma,
+            yaşlı bakımı ve hasta bakımı hizmetlerini deneyimli sağlık
+            personelimizle güvenle sunuyoruz.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-5">
+          <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-3 lg:mt-6">
+            {features.map((item) => {
+              const Icon = item.icon;
 
-            <div className="flex items-center gap-2">
+              return (
+                <div
+                  key={item.title}
+                  className="flex items-center gap-3 rounded-xl border border-slate-100 bg-white px-3.5 py-3 shadow-sm"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
+                    <Icon size={16} />
+                  </div>
 
-              <span className="text-xl">
-                ⭐⭐⭐⭐⭐
-              </span>
-
-              <span className="font-semibold text-slate-700">
-                1000+ Mutlu Hasta
-              </span>
-
-            </div>
-
-            <div className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
-              Aynı Gün Hizmet
-            </div>
-
+                  <span className="text-[13px] font-semibold leading-5 text-slate-700">
+                    {item.title}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-
-            {features.map((item) => (
-
-              <div
-                key={item}
-                className="flex items-center gap-3 rounded-2xl bg-white px-5 py-4 shadow-md"
-              >
-
-                <CheckCircle2
-                  size={22}
-                  className="text-emerald-500"
-                />
-
-                <span className="font-medium text-slate-700">
-                  {item}
-                </span>
-
-              </div>
-
-            ))}
-
-          </div>
-
-          <div className="mt-12 flex flex-wrap gap-4">
-
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:flex lg:mt-7">
             <a
               href="tel:+905396952989"
-              className="flex items-center gap-3 rounded-2xl bg-sky-800 px-8 py-4 font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:bg-sky-900"
+              className="flex items-center justify-center gap-2 rounded-xl bg-sky-800 px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-sky-900 sm:px-7 sm:text-base"
             >
-              <Phone size={20} />
+              <Phone size={18} />
               Hemen Ara
             </a>
 
@@ -135,260 +92,39 @@ export default function Hero() {
               href="https://wa.me/905396952989"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-2xl bg-emerald-500 px-8 py-4 font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:bg-emerald-600"
+              className="flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-emerald-600 sm:px-7 sm:text-base"
             >
-              <MessageCircle size={20} />
+              <MessageCircle size={18} />
               WhatsApp
             </a>
-
           </div>
-                    <div className="mt-16 grid gap-5 sm:grid-cols-3">
-
-            {stats.map((item) => {
-              const Icon = item.icon;
-
-              return (
-
-                <div
-                  key={item.value}
-                  className="rounded-3xl border border-slate-100 bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
-                >
-
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-cyan-700">
-
-                    <Icon size={28} />
-
-                  </div>
-
-                  <div className="text-3xl font-extrabold text-slate-900">
-                    {item.value}
-                  </div>
-
-                  <p className="mt-2 text-slate-600">
-                    {item.title}
-                  </p>
-
-                </div>
-
-              );
-            })}
-
-          </div>
-
         </motion.div>
 
         <motion.div
-          className="flex flex-1 justify-center"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: .8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative mt-1 lg:mt-0"
         >
+          <div className="absolute inset-0 scale-105 rounded-full bg-cyan-200/25 blur-[90px]" />
 
-          <div className="relative">
-
-            <div className="absolute inset-0 scale-110 rounded-full bg-cyan-200/40 blur-[130px]" />
-
-            <div className="absolute -left-8 top-8 z-30 rounded-3xl border border-slate-100 bg-white px-6 py-5 shadow-2xl">
-
-              <div className="text-sm text-slate-500">
-                Hasta Memnuniyeti
-              </div>
-
-              <div className="mt-2 text-4xl font-black text-emerald-600">
-                %100
-              </div>
-
-            </div>
-
-            <div className="absolute right-6 top-6 z-30 rounded-3xl border border-slate-100 bg-white px-6 py-5 shadow-2xl">
-
-              <div className="text-xs uppercase tracking-widest text-slate-500">
-                MEDİSU
-              </div>
-
-              <div className="mt-2 font-bold text-sky-800">
-                Lisanslı Sağlık Personeli
-              </div>
-
-            </div>
-
-            <div className="absolute -right-8 bottom-24 z-30 rounded-3xl border border-slate-100 bg-white px-6 py-5 shadow-2xl">
-
-              <div className="text-sm text-slate-500">
-                Hizmet Bölgesi
-              </div>
-
-              <div className="mt-2 text-3xl font-black text-sky-700">
-                39 İlçe
-              </div>
-
-            </div>
-
-            <div className="overflow-hidden rounded-[42px] border border-white bg-white p-4 shadow-[0_35px_80px_rgba(15,23,42,.15)]">
-
-              <Image
-               
-               
-  src="/images/hero.png"
-  alt="MEDİSU Evde Sağlık Hizmetleri"
-  width={700}
-                height={850}
-                priority
-
-                className="h-auto w-full rounded-[32px] object-cover transition duration-700 hover:scale-105"
-              />
-
-            </div>
-
-            <div className="absolute -bottom-7 left-1/2 z-40 w-[92%] -translate-x-1/2 rounded-[28px] border border-slate-100 bg-white/95 p-6 shadow-2xl backdrop-blur-xl">
-
-              <div className="grid grid-cols-3 gap-5 text-center">
-
-                <div>
-
-                  <div className="text-3xl font-black text-sky-800">
-                    7/24
-                  </div>
-
-                  <div className="mt-1 text-sm text-slate-600">
-                    Destek
-                  </div>
-
-                </div>
-
-                <div>
-
-                  <div className="text-3xl font-black text-emerald-600">
-                    1000+
-                  </div>
-
-                  <div className="mt-1 text-sm text-slate-600">
-                    Hasta
-                  </div>
-
-                </div>
-
-                <div>
-
-                  <div className="text-3xl font-black text-cyan-700">
-                    %100
-                  </div>
-
-                  <div className="mt-1 text-sm text-slate-600">
-                    Güven
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
+          <div className="relative overflow-hidden rounded-[24px] border border-white/80 bg-white p-2 shadow-[0_20px_50px_rgba(15,23,42,.12)] sm:rounded-[32px] sm:p-3">
+            <Image
+              src="/images/hero.png"
+              alt="MEDİSU Evde Sağlık Hizmetleri"
+              width={700}
+              height={700}
+              priority
+              className="aspect-[16/11] w-full rounded-[18px] object-cover sm:rounded-[26px] lg:aspect-auto"
+            />
           </div>
 
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/80 bg-white/95 px-4 py-2 text-[11px] font-bold text-sky-800 shadow-lg backdrop-blur sm:bottom-5 sm:px-5 sm:py-3 sm:text-sm">
+            İstanbul&apos;un 39 İlçesinde Hizmet
+          </div>
         </motion.div>
-              </div>
-
-      <div className="absolute inset-x-0 bottom-0">
-
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="grid gap-4 rounded-[36px] border border-slate-100 bg-white/90 p-6 shadow-xl backdrop-blur lg:grid-cols-4">
-
-            <div className="flex items-center gap-4">
-
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100">
-
-                <ShieldCheck className="text-cyan-700" />
-
-              </div>
-
-              <div>
-
-                <div className="font-bold text-slate-900">
-                  Lisanslı Ekip
-                </div>
-
-                <div className="text-sm text-slate-500">
-                  Uzman sağlık personeli
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="flex items-center gap-4">
-
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100">
-
-                <HeartHandshake className="text-emerald-600" />
-
-              </div>
-
-              <div>
-
-                <div className="font-bold text-slate-900">
-                  1000+ Hasta
-                </div>
-
-                <div className="text-sm text-slate-500">
-                  Memnuniyet odaklı hizmet
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="flex items-center gap-4">
-
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100">
-
-                <Clock3 className="text-sky-700" />
-
-              </div>
-
-              <div>
-
-                <div className="font-bold text-slate-900">
-                  7/24 Destek
-                </div>
-
-                <div className="text-sm text-slate-500">
-                  Her zaman ulaşılabilir
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="flex items-center gap-4">
-
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100">
-
-                <CheckCircle2 className="text-cyan-700" />
-
-              </div>
-
-              <div>
-
-                <div className="font-bold text-slate-900">
-                  İstanbul Geneli
-                </div>
-
-                <div className="text-sm text-slate-500">
-                  39 ilçeye hizmet
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
 
       </div>
-
     </section>
   );
 }
