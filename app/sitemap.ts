@@ -53,11 +53,22 @@ const districtServices = [
 
 const allServices = [
   ...districtServices,
+
+  // YENİ ANA HİZMET SAYFALARI
+  "enjeksiyon",
+  "sonda-degisimi",
+  "yara-bakimi",
+  "idrar-tahlili",
+
+  // DİĞER HİZMETLER
   "glutatyon-tedavisi",
   "pascorbin-tedavisi",
   "todavit-multivitamin",
   "nad-plus-tedavisi",
   "mounjaro-tedavisi",
+
+  // TAD 600 SAYFASI GERÇEKTEN VARSA BUNU DA EKLE
+  "tad-600",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
