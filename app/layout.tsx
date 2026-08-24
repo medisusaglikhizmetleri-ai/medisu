@@ -25,33 +25,40 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://medisusaglik.com"),
 
   title: {
-    default: "MEDİSU | Evde Bakım ve Sağlık Hizmetleri",
+    default:
+      "İstanbul Evde Sağlık Hizmetleri | Evde Hemşire & Serum | MEDİSU",
     template: "%s | MEDİSU",
   },
 
   description:
-    "MEDİSU, İstanbul genelinde evde hemşire, serum, pansuman, kan alma, yaşlı ve hasta bakımı ile hekim değerlendirmesi doğrultusunda çeşitli evde sağlık uygulamaları sunar.",
+    "İstanbul genelinde evde hemşire, evde serum, kan alma, pansuman, enjeksiyon, sonda değişimi, yara bakımı, yaşlı ve hasta bakımı hizmetleri. MEDİSU Evde Sağlık Hizmetleri.",
 
   keywords: [
     "evde sağlık hizmeti",
+    "İstanbul evde sağlık",
     "evde hemşire",
+    "İstanbul evde hemşire",
     "evde serum",
-    "evde pansuman",
+    "İstanbul evde serum",
     "evde kan alma",
+    "evde pansuman",
+    "evde enjeksiyon",
+    "evde yara bakımı",
+    "evde sonda değişimi",
+    "evde idrar tahlili",
     "evde yaşlı bakımı",
     "evde hasta bakımı",
-    "İstanbul evde sağlık",
-    "İstanbul evde hemşire",
-    "glutatyon uygulaması İstanbul",
-    "Pascorbin uygulaması İstanbul",
-    "Todavit multivitamin İstanbul",
-    "NAD+ uygulaması İstanbul",
+    "glutatyon uygulaması",
+    "NAD+ uygulaması",
+    "Pascorbin uygulaması",
+    "Todavit multivitamin",
+    "TAD 600 uygulaması",
     "MEDİSU",
   ],
 
   authors: [
     {
-      name: "MEDİSU",
+      name: "MEDİSU Evde Sağlık Hizmetleri",
     },
   ],
 
@@ -59,7 +66,7 @@ export const metadata: Metadata = {
   publisher: "MEDİSU",
 
   alternates: {
-    canonical: "https://medisusaglik.com",
+    canonical: "https://medisusaglik.com/",
   },
 
   verification: {
@@ -79,26 +86,30 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "MEDİSU | Evde Bakım ve Sağlık Hizmetleri",
+    title:
+      "İstanbul Evde Sağlık Hizmetleri | Evde Hemşire & Serum | MEDİSU",
     description:
-      "İstanbul genelinde profesyonel evde sağlık hizmetleri. Evde hemşire, serum, pansuman, kan alma, yaşlı ve hasta bakımı.",
-    url: "https://medisusaglik.com",
-    siteName: "MEDİSU",
+      "İstanbul genelinde evde hemşire, serum, kan alma, pansuman, enjeksiyon, sonda değişimi, yara bakımı, yaşlı ve hasta bakımı hizmetleri.",
+    url: "https://medisusaglik.com/",
+    siteName: "MEDİSU Evde Sağlık Hizmetleri",
     locale: "tr_TR",
     type: "website",
     images: [
       {
         url: "/images/hero.png",
-        alt: "MEDİSU Evde Bakım ve Sağlık Hizmetleri",
+        width: 1200,
+        height: 630,
+        alt: "MEDİSU İstanbul Evde Sağlık Hizmetleri",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "MEDİSU | Evde Bakım ve Sağlık Hizmetleri",
+    title:
+      "İstanbul Evde Sağlık Hizmetleri | Evde Hemşire & Serum | MEDİSU",
     description:
-      "İstanbul genelinde profesyonel evde bakım ve sağlık hizmetleri.",
+      "İstanbul genelinde profesyonel evde hemşire, serum, kan alma, pansuman ve bakım hizmetleri.",
     images: ["/images/hero.png"],
   },
 
@@ -131,10 +142,7 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-9GEWR8787Q" />
 
         {/* MICROSOFT CLARITY */}
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-        >
+        <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){

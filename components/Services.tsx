@@ -91,8 +91,6 @@ const services = [
       "NAD+ intravenöz uygulamasının uygunluk değerlendirmesi sonrasında sağlık personeli tarafından ev ortamında gerçekleştirilmesi.",
   },
 
-  // MOUNJARO
-
   {
     title: "Mounjaro Tedavisi",
     slug: "mounjaro-tedavisi",
@@ -100,6 +98,15 @@ const services = [
     position: "center",
     description:
       "Hekim değerlendirmesi ve reçetelendirmesi doğrultusunda Mounjaro (tirzepatid) tedavi sürecine yönelik profesyonel sağlık desteği.",
+  },
+
+  {
+    title: "TAD 600",
+    slug: "tad-600",
+    image: "/images/services/tad600.png",
+    position: "center",
+    description:
+      "TAD 600 uygulamasının hekim değerlendirmesi doğrultusunda evinizde profesyonel sağlık personeli tarafından gerçekleştirilmesi.",
   },
 ];
 
@@ -113,8 +120,6 @@ export default function Services() {
       <div className="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-sky-100/50 blur-[130px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
-
-        {/* BAŞLIK */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +144,6 @@ export default function Services() {
           </p>
         </motion.div>
 
-        {/* HİZMET KARTLARI */}
         <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {services.map((service, index) => (
             <motion.div
@@ -157,8 +161,6 @@ export default function Services() {
                 className="group block h-full"
               >
                 <article className="h-full overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-200 hover:shadow-xl sm:rounded-[28px]">
-
-                  {/* GÖRSEL */}
                   <div className="relative h-[180px] overflow-hidden sm:h-[210px] lg:h-[245px]">
                     <Image
                       src={service.image}
@@ -185,7 +187,6 @@ export default function Services() {
                     </div>
                   </div>
 
-                  {/* İÇERİK */}
                   <div className="p-5 sm:p-6 lg:p-7">
                     <p className="text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
                       {service.description}
@@ -197,7 +198,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* ALT CTA */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,6 @@ export default function Services() {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
