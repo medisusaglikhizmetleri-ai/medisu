@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde enjeksiyon hizmeti. Hekim istemine uygun enjeksiyon uygulamalarının deneyimli sağlık personeli tarafından evinizde gerçekleştirilmesi için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/enjeksiyon",
+    canonical: "https://www.medisusaglik.com/hizmetler/enjeksiyon",
   },
 };
 

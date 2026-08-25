@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde yara bakımı ve pansuman hizmeti. Yara değerlendirmesi, temizliği ve bakımına yönelik profesyonel sağlık desteği için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/yara-bakimi",
+    canonical: "https://www.medisusaglik.com/hizmetler/yara-bakimi",
   },
 };
 

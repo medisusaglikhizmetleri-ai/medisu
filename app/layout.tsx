@@ -22,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://medisusaglik.com"),
+  metadataBase: new URL("https://www.medisusaglik.com"),
 
   title: {
     default:
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   publisher: "MEDİSU",
 
   alternates: {
-    canonical: "https://medisusaglik.com/",
+    canonical: "https://www.medisusaglik.com/",
   },
 
   verification: {
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
       "İstanbul Evde Sağlık Hizmetleri | Evde Hemşire & Serum | MEDİSU",
     description:
       "İstanbul genelinde evde hemşire, serum, kan alma, pansuman, enjeksiyon, sonda değişimi, yara bakımı, yaşlı ve hasta bakımı hizmetleri.",
-    url: "https://medisusaglik.com/",
+    url: "https://www.medisusaglik.com/",
     siteName: "MEDİSU Evde Sağlık Hizmetleri",
     locale: "tr_TR",
     type: "website",
@@ -160,3 +160,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

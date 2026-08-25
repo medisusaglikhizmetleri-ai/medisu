@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde hasta bakımı ve günlük bakım desteği. Hastanın ihtiyaçlarına uygun profesyonel evde bakım hizmeti için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/hasta-bakimi",
+    canonical: "https://www.medisusaglik.com/hizmetler/hasta-bakimi",
   },
 };
 

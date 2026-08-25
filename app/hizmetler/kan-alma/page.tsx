@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde kan alma ve numune alma hizmeti. Deneyimli sağlık personeli ile evinizde hijyenik ve profesyonel kan alma desteği için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/kan-alma",
+    canonical: "https://www.medisusaglik.com/hizmetler/kan-alma",
   },
 };
 

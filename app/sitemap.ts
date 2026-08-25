@@ -72,7 +72,7 @@ const allServices = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://medisusaglik.com";
+  const baseUrl = "https://www.medisusaglik.com";
 
   const pages: MetadataRoute.Sitemap = [
     {
@@ -107,3 +107,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return pages;
 }
+

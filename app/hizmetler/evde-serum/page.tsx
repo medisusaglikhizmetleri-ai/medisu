@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde serum hizmeti. Hekim önerisi doğrultusunda serum uygulaması, damar yolu takibi ve profesyonel sağlık desteği için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/evde-serum",
+    canonical: "https://www.medisusaglik.com/hizmetler/evde-serum",
   },
 };
 

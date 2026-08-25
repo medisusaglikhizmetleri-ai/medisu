@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "TAD 600 uygulaması hakkında bilgi alın. MEDİSU profesyonel sağlık ekibi ile doktor değerlendirmesi ve uygunluk doğrultusunda evde sağlık hizmeti.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/tad-600",
+    canonical: "https://www.medisusaglik.com/hizmetler/tad-600",
   },
 };
 

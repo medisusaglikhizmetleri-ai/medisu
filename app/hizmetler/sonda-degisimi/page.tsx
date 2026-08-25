@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde sonda değişimi ve sonda bakımı hizmeti. Deneyimli sağlık personeli ile hijyenik ve profesyonel uygulama için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/sonda-degisimi",
+    canonical: "https://www.medisusaglik.com/hizmetler/sonda-degisimi",
   },
 };
 

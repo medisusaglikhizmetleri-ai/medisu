@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde idrar tahlili için numune alma desteği. Hijyenik numune süreci ve gerekli durumlarda laboratuvar sürecine yönlendirme için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/idrar-tahlili",
+    canonical: "https://www.medisusaglik.com/hizmetler/idrar-tahlili",
   },
 };
 

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "İstanbul genelinde evde hemşire hizmeti. Serum uygulaması, enjeksiyon, pansuman, vital bulgu takibi ve hekim önerisine uygun hemşirelik işlemleri için MEDİSU.",
   alternates: {
-    canonical: "https://medisusaglik.com/hizmetler/evde-hemsire",
+    canonical: "https://www.medisusaglik.com/hizmetler/evde-hemsire",
   },
 };
 

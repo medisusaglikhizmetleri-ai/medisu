@@ -121,7 +121,7 @@ export async function generateMetadata({
     title: service.title,
     description: service.description,
     alternates: {
-      canonical: `https://medisusaglik.com/hizmetler/${hizmet}`,
+      canonical: `https://www.medisusaglik.com/hizmetler/${hizmet}`,
     },
   };
 }
@@ -178,7 +178,7 @@ export default async function HizmetPage({
       <ServiceSchema
         name={service.title}
         description={service.description}
-        url={`https://medisusaglik.com/hizmetler/${hizmet}`}
+        url={`https://www.medisusaglik.com/hizmetler/${hizmet}`}
       />
 
       <FAQSchema faqs={faq} />
