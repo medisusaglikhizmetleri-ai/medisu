@@ -137,7 +137,7 @@ export default function Footer() {
                   className="flex items-center gap-3"
                 >
                   <Phone size={18} />
-                  0539 695 29 89
+                  0542 893 96 46
                 </a>
 
                 <a

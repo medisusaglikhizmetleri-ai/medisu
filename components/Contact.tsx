@@ -15,7 +15,7 @@ const contactItems = [
   {
     icon: Phone,
     title: "Telefon",
-    value: "0539 695 29 89",
+    value: "0542 893 96 46",
     href: "tel:+905428939646",
   },
   {
@@ -200,7 +200,7 @@ export default function Contact() {
                     className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-sky-900 shadow-lg transition hover:-translate-y-0.5 sm:text-base"
                   >
                     <Phone size={19} />
-                    0539 695 29 89
+                    0542 893 96 46
                   </a>
 
                   <a

@@ -133,7 +133,7 @@ export default function Header() {
               className="hidden items-center gap-2 rounded-2xl bg-sky-800 px-6 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-900 lg:flex"
             >
               <Phone size={18} />
-              0539 695 29 89
+              0542 893 96 46
             </a>
 
             {/* MOBİL TELEFON */}

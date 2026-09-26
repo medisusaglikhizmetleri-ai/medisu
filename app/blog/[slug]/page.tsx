@@ -132,7 +132,7 @@ export default async function BlogDetail({
                 className="flex items-center gap-3 rounded-2xl bg-white px-8 py-4 font-semibold text-sky-900 transition hover:scale-105"
               >
                 <Phone size={20} />
-                0539 695 29 89
+                0542 893 96 46
               </a>
 
               <a

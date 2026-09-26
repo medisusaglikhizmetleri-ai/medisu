@@ -261,7 +261,7 @@ export default async function DistrictServicePage({
                 href="tel:+905428939646"
                 className="rounded-2xl bg-white px-8 py-4 font-semibold text-sky-900 transition hover:bg-slate-100"
               >
-                📞 0539 695 29 89
+                📞 0542 893 96 46
               </a>
 
               <a

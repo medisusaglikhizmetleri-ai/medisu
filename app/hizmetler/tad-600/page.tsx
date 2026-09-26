@@ -465,7 +465,7 @@ export default function Tad600Page() {
                   className="inline-flex items-center gap-2 rounded-2xl bg-sky-800 px-7 py-4 font-semibold text-white transition hover:bg-sky-900"
                 >
                   <Phone size={20} />
-                  0539 695 29 89
+                  0542 893 96 46
                 </a>
 
                 <a

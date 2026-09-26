@@ -684,7 +684,7 @@ export default async function HizmetPage({
                 className="inline-flex items-center gap-3 rounded-2xl bg-white px-10 py-5 text-lg font-bold text-sky-900 transition hover:scale-105"
               >
                 <Phone size={22} />
-                0539 695 29 89
+                0542 893 96 46
               </a>
 
               <a
