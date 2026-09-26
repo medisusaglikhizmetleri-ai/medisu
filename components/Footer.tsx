@@ -133,7 +133,7 @@ export default function Footer() {
 
               <div className="mt-6 space-y-4 text-sm sm:text-base">
                 <a
-                  href="tel:+905396952989"
+                  href="tel:+905428939646"
                   className="flex items-center gap-3"
                 >
                   <Phone size={18} />
@@ -160,7 +160,7 @@ export default function Footer() {
               </div>
 
               <a
-                href="https://wa.me/905396952989"
+                href="https://wa.me/905428939646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-xl bg-white px-6 py-3 font-semibold text-cyan-700 transition hover:bg-slate-100"

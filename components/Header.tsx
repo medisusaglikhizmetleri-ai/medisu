@@ -119,7 +119,7 @@ export default function Header() {
           {/* SAĞ BUTONLAR */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/905396952989"
+              href="https://wa.me/905428939646"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden items-center gap-2 rounded-2xl border border-emerald-500 px-5 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-500 hover:text-white lg:flex"
@@ -129,7 +129,7 @@ export default function Header() {
             </a>
 
             <a
-              href="tel:+905396952989"
+              href="tel:+905428939646"
               className="hidden items-center gap-2 rounded-2xl bg-sky-800 px-6 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-900 lg:flex"
             >
               <Phone size={18} />
@@ -138,7 +138,7 @@ export default function Header() {
 
             {/* MOBİL TELEFON */}
             <a
-              href="tel:+905396952989"
+              href="tel:+905428939646"
               aria-label="MEDİSU'yu ara"
               className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-800 text-white shadow-md lg:hidden"
             >
@@ -222,7 +222,7 @@ export default function Header() {
 
             <div className="mt-5 grid grid-cols-2 gap-3">
               <a
-                href="https://wa.me/905396952989"
+                href="https://wa.me/905428939646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-3 py-4 font-semibold text-white shadow-md transition hover:bg-emerald-600"
@@ -232,7 +232,7 @@ export default function Header() {
               </a>
 
               <a
-                href="tel:+905396952989"
+                href="tel:+905428939646"
                 className="flex items-center justify-center gap-2 rounded-2xl bg-sky-800 px-3 py-4 font-semibold text-white shadow-md transition hover:bg-sky-900"
               >
                 <Phone size={19} />

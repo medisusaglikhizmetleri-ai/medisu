@@ -16,13 +16,13 @@ const contactItems = [
     icon: Phone,
     title: "Telefon",
     value: "0539 695 29 89",
-    href: "tel:+905396952989",
+    href: "tel:+905428939646",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
     value: "Hemen Yazın",
-    href: "https://wa.me/905396952989",
+    href: "https://wa.me/905428939646",
   },
   {
     icon: Mail,
@@ -196,7 +196,7 @@ export default function Contact() {
 
                 <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
                   <a
-                    href="tel:+905396952989"
+                    href="tel:+905428939646"
                     className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-sky-900 shadow-lg transition hover:-translate-y-0.5 sm:text-base"
                   >
                     <Phone size={19} />
@@ -204,7 +204,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://wa.me/905396952989"
+                    href="https://wa.me/905428939646"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-600 sm:text-base"

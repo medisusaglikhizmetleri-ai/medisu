@@ -245,7 +245,7 @@ export default async function HizmetPage({
             <div className="mt-12 flex flex-wrap gap-4">
 
               <a
-                href="tel:+905396952989"
+                href="tel:+905428939646"
                 className="inline-flex items-center gap-3 rounded-2xl bg-sky-800 px-8 py-4 font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:bg-sky-900"
               >
                 <Phone size={20} />
@@ -253,7 +253,7 @@ export default async function HizmetPage({
               </a>
 
               <a
-                href="https://wa.me/905396952989"
+                href="https://wa.me/905428939646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 rounded-2xl bg-emerald-500 px-8 py-4 font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:bg-emerald-600"
@@ -680,7 +680,7 @@ export default async function HizmetPage({
             <div className="mt-12 flex flex-wrap justify-center gap-5">
 
               <a
-                href="tel:+905396952989"
+                href="tel:+905428939646"
                 className="inline-flex items-center gap-3 rounded-2xl bg-white px-10 py-5 text-lg font-bold text-sky-900 transition hover:scale-105"
               >
                 <Phone size={22} />
@@ -688,7 +688,7 @@ export default async function HizmetPage({
               </a>
 
               <a
-                href="https://wa.me/905396952989"
+                href="https://wa.me/905428939646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 rounded-2xl bg-emerald-500 px-10 py-5 text-lg font-bold text-white transition hover:scale-105 hover:bg-emerald-600"

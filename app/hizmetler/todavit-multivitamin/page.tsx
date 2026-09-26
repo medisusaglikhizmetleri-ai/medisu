@@ -127,7 +127,7 @@ export default function TodavitPage() {
 
               <div className="mt-8 grid grid-cols-2 gap-3 sm:flex">
                 <a
-                  href="tel:+905396952989"
+                  href="tel:+905428939646"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-800 px-6 py-4 font-bold text-white shadow-lg"
                 >
                   <Phone size={19} />
@@ -135,7 +135,7 @@ export default function TodavitPage() {
                 </a>
 
                 <a
-                  href="https://wa.me/905396952989"
+                  href="https://wa.me/905428939646"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-4 font-bold text-white shadow-lg"
@@ -343,7 +343,7 @@ export default function TodavitPage() {
 
               <div className="mt-7 grid grid-cols-2 gap-3 sm:flex sm:justify-center">
                 <a
-                  href="tel:+905396952989"
+                  href="tel:+905428939646"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 font-bold text-sky-900"
                 >
                   <Phone size={19} />
@@ -351,7 +351,7 @@ export default function TodavitPage() {
                 </a>
 
                 <a
-                  href="https://wa.me/905396952989"
+                  href="https://wa.me/905428939646"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-4 font-bold text-white"

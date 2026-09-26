@@ -155,7 +155,7 @@ export default function Tad600Page() {
 
                 <div className="mt-10 flex flex-wrap gap-4">
                   <a
-                    href="tel:+905396952989"
+                    href="tel:+905428939646"
                     className="inline-flex items-center gap-2 rounded-2xl bg-sky-800 px-7 py-4 font-semibold text-white transition hover:bg-sky-900"
                   >
                     <Phone size={20} />
@@ -163,7 +163,7 @@ export default function Tad600Page() {
                   </a>
 
                   <a
-                    href="https://wa.me/905396952989?text=Merhaba%2C%20TAD%20600%20uygulaması%20hakkında%20bilgi%20almak%20istiyorum."
+                    href="https://wa.me/905428939646?text=Merhaba%2C%20TAD%20600%20uygulaması%20hakkında%20bilgi%20almak%20istiyorum."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-7 py-4 font-semibold text-white transition hover:bg-emerald-600"
@@ -461,7 +461,7 @@ export default function Tad600Page() {
 
               <div className="flex flex-wrap gap-4 lg:justify-end">
                 <a
-                  href="tel:+905396952989"
+                  href="tel:+905428939646"
                   className="inline-flex items-center gap-2 rounded-2xl bg-sky-800 px-7 py-4 font-semibold text-white transition hover:bg-sky-900"
                 >
                   <Phone size={20} />
@@ -469,7 +469,7 @@ export default function Tad600Page() {
                 </a>
 
                 <a
-                  href="https://wa.me/905396952989?text=Merhaba%2C%20TAD%20600%20uygulaması%20hakkında%20bilgi%20almak%20istiyorum."
+                  href="https://wa.me/905428939646?text=Merhaba%2C%20TAD%20600%20uygulaması%20hakkında%20bilgi%20almak%20istiyorum."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-7 py-4 font-semibold text-white transition hover:bg-emerald-600"
@@ -532,7 +532,7 @@ export default function Tad600Page() {
             </p>
 
             <a
-              href="https://wa.me/905396952989?text=Merhaba%2C%20TAD%20600%20uygulaması%20hakkında%20bilgi%20almak%20istiyorum."
+              href="https://wa.me/905428939646?text=Merhaba%2C%20TAD%20600%20uygulaması%20hakkında%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-8 py-4 font-semibold text-white transition hover:bg-emerald-600"

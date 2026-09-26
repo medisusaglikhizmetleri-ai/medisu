@@ -128,7 +128,7 @@ export default async function BlogDetail({
             <div className="mt-10 flex flex-wrap justify-center gap-5">
 
               <a
-                href="tel:+905396952989"
+                href="tel:+905428939646"
                 className="flex items-center gap-3 rounded-2xl bg-white px-8 py-4 font-semibold text-sky-900 transition hover:scale-105"
               >
                 <Phone size={20} />
@@ -136,7 +136,7 @@ export default async function BlogDetail({
               </a>
 
               <a
-                href="https://wa.me/905396952989"
+                href="https://wa.me/905428939646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-2xl bg-emerald-500 px-8 py-4 font-semibold text-white transition hover:bg-emerald-600"

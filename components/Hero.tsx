@@ -81,7 +81,7 @@ export default function Hero() {
 
           <div className="mt-5 grid grid-cols-2 gap-3 sm:flex lg:mt-7">
             <a
-              href="tel:+905396952989"
+              href="tel:+905428939646"
               className="flex items-center justify-center gap-2 rounded-xl bg-sky-800 px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-sky-900 sm:px-7 sm:text-base"
             >
               <Phone size={18} />
@@ -89,7 +89,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/905396952989"
+              href="https://wa.me/905428939646"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-emerald-600 sm:px-7 sm:text-base"

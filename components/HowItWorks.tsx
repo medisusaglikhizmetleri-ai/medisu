@@ -163,7 +163,7 @@ export default function HowItWorks() {
 
             <div className="grid grid-cols-2 gap-3 lg:flex lg:flex-col">
               <a
-                href="tel:+905396952989"
+                href="tel:+905428939646"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-3 py-3.5 text-sm font-bold text-sky-900 shadow-lg transition hover:-translate-y-0.5 sm:px-6 sm:text-base"
               >
                 <PhoneCall size={18} />
@@ -171,7 +171,7 @@ export default function HowItWorks() {
               </a>
 
               <a
-                href="https://wa.me/905396952989"
+                href="https://wa.me/905428939646"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-3 py-3.5 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-600 sm:px-6 sm:text-base"

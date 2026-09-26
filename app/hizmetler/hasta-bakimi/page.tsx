@@ -77,14 +77,14 @@ export default function EvdeHastaBakimiPage() {
 
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <a
-            href="tel:+905396952989"
+            href="tel:+905428939646"
             className="inline-flex items-center justify-center rounded-2xl bg-sky-800 px-8 py-4 font-semibold text-white transition hover:bg-sky-900"
           >
             Hemen Ara
           </a>
 
           <a
-            href="https://wa.me/905396952989"
+            href="https://wa.me/905428939646"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-2xl bg-emerald-500 px-8 py-4 font-semibold text-white transition hover:bg-emerald-600"

@@ -12,7 +12,7 @@ export default function ServiceSchema({
     "@type": "MedicalBusiness",
     name: "MEDİSU Evde Sağlık Hizmetleri",
     url: "https://medisusaglik.com",
-    telephone: "+905396952989",
+    telephone: "+905428939646",
     areaServed: "İstanbul",
     medicalSpecialty: "HomeCare",
     hasOfferCatalog: {

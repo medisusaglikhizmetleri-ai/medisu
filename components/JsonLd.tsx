@@ -9,7 +9,7 @@ export default function JsonLd() {
 
     url: "https://medisusaglik.com",
 
-    telephone: "+905396952989",
+    telephone: "+905428939646",
 
     email: "medisu.saglikhizmetleri@gmail.com",
 
