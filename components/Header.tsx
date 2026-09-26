@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Phone,
   Menu,
@@ -11,10 +12,30 @@ import {
   Star,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import {
+  translations,
+  type Locale,
+} from "@/lib/translations";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
+
+  const firstSegment = pathname.split("/")[1];
+
+  const locale: Locale =
+    firstSegment === "en" ||
+    firstSegment === "ar" ||
+    firstSegment === "ru"
+      ? firstSegment
+      : "tr";
+
+  const t = translations[locale];
+
+  const homePath =
+    locale === "tr" ? "/" : `/${locale}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,13 +44,49 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const languages: {
+    code: Locale;
+    label: string;
+    flag: string;
+    href: string;
+  }[] = [
+    {
+      code: "tr",
+      label: "TR",
+      flag: "🇹🇷",
+      href: "/",
+    },
+    {
+      code: "en",
+      label: "EN",
+      flag: "🇬🇧",
+      href: "/en",
+    },
+    {
+      code: "ar",
+      label: "AR",
+      flag: "🇸🇦",
+      href: "/ar",
+    },
+    {
+      code: "ru",
+      label: "RU",
+      flag: "🇷🇺",
+      href: "/ru",
+    },
+  ];
 
   return (
     <>
       {/* ÜST BİLGİ ŞERİDİ */}
-      <div className="hidden bg-sky-900 text-white lg:block">
+      <div
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        className="hidden bg-sky-900 text-white lg:block"
+      >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-sm">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
@@ -37,7 +94,8 @@ export default function Header() {
                 size={16}
                 className="text-emerald-400"
               />
-              <span>Sağlık Bakanlığı Standartlarına Uygun Hizmet</span>
+
+              <span>{t.header.healthStandard}</span>
             </div>
 
             <div className="flex items-center gap-2">
@@ -46,18 +104,20 @@ export default function Header() {
                 fill="currentColor"
                 className="text-amber-400"
               />
-              <span>Hasta Memnuniyeti Odaklı</span>
+
+              <span>{t.header.satisfaction}</span>
             </div>
           </div>
 
           <div className="rounded-full bg-emerald-500 px-4 py-1 font-semibold">
-            7/24 Destek
+            {t.header.support}
           </div>
         </div>
       </div>
 
       {/* HEADER */}
       <header
+        dir={locale === "ar" ? "rtl" : "ltr"}
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
             ? "border-b border-slate-200/70 bg-white/90 shadow-lg backdrop-blur-2xl"
@@ -66,13 +126,15 @@ export default function Header() {
       >
         <div
           className={`mx-auto flex max-w-7xl items-center justify-between px-5 transition-all duration-300 sm:px-6 ${
-            scrolled ? "h-[72px] lg:h-20" : "h-[78px] lg:h-24"
+            scrolled
+              ? "h-[72px] lg:h-20"
+              : "h-[78px] lg:h-24"
           }`}
         >
           {/* LOGO */}
           <Link
-            href="/"
-            aria-label="MEDİSU Ana Sayfa"
+            href={homePath}
+            aria-label="MEDİSU"
             className="flex shrink-0 items-center transition duration-300 hover:scale-[1.02]"
           >
             <Image
@@ -86,43 +148,66 @@ export default function Header() {
           </Link>
 
           {/* MASAÜSTÜ MENÜ */}
-          <nav className="hidden items-center gap-9 lg:flex">
+          <nav className="hidden items-center gap-7 lg:flex">
             <a
-              href="#top"
+              href={`${homePath}#top`}
               className="font-medium text-slate-700 transition hover:text-cyan-700"
             >
-              Ana Sayfa
+              {t.nav.home}
             </a>
 
             <a
-              href="#services"
+              href={`${homePath}#services`}
               className="font-medium text-slate-700 transition hover:text-cyan-700"
             >
-              Hizmetler
+              {t.nav.services}
             </a>
 
             <a
-              href="#about"
+              href={`${homePath}#about`}
               className="font-medium text-slate-700 transition hover:text-cyan-700"
             >
-              Hakkımızda
+              {t.nav.about}
             </a>
 
             <a
-              href="#contact"
+              href={`${homePath}#contact`}
               className="font-medium text-slate-700 transition hover:text-cyan-700"
             >
-              İletişim
+              {t.nav.contact}
             </a>
           </nav>
 
-          {/* SAĞ BUTONLAR */}
-          <div className="flex items-center gap-3">
+          {/* SAĞ TARAF */}
+          <div className="flex items-center gap-2">
+            {/* DİL SEÇİCİ */}
+            <div className="hidden items-center rounded-xl border border-slate-200 bg-white p-1 lg:flex">
+              {languages.map((language) => (
+                <Link
+                  key={language.code}
+                  href={language.href}
+                  title={
+                    translations[language.code].languageName
+                  }
+                  className={`rounded-lg px-2 py-1.5 text-xs font-bold transition ${
+                    locale === language.code
+                      ? "bg-sky-800 text-white"
+                      : "text-slate-600 hover:bg-slate-100"
+                  }`}
+                >
+                  <span className="mr-1">
+                    {language.flag}
+                  </span>
+                  {language.label}
+                </Link>
+              ))}
+            </div>
+
             <a
               href="https://wa.me/905428939646"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden items-center gap-2 rounded-2xl border border-emerald-500 px-5 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-500 hover:text-white lg:flex"
+              className="hidden items-center gap-2 rounded-2xl border border-emerald-500 px-4 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-500 hover:text-white xl:flex"
             >
               <MessageCircle size={19} />
               WhatsApp
@@ -130,7 +215,7 @@ export default function Header() {
 
             <a
               href="tel:+905428939646"
-              className="hidden items-center gap-2 rounded-2xl bg-sky-800 px-6 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-900 lg:flex"
+              className="hidden items-center gap-2 rounded-2xl bg-sky-800 px-5 py-3 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-900 xl:flex"
             >
               <Phone size={18} />
               0542 893 96 46
@@ -139,7 +224,7 @@ export default function Header() {
             {/* MOBİL TELEFON */}
             <a
               href="tel:+905428939646"
-              aria-label="MEDİSU'yu ara"
+              aria-label={t.header.callMedisu}
               className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-800 text-white shadow-md lg:hidden"
             >
               <Phone size={20} />
@@ -148,59 +233,91 @@ export default function Header() {
             {/* MOBİL MENÜ */}
             <button
               type="button"
-              aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
+              aria-label={
+                open
+                  ? t.header.closeMenu
+                  : t.header.openMenu
+              }
               onClick={() => setOpen(!open)}
               className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 text-slate-800 transition hover:bg-slate-100 lg:hidden"
             >
-              {open ? <X size={25} /> : <Menu size={25} />}
+              {open ? (
+                <X size={25} />
+              ) : (
+                <Menu size={25} />
+              )}
             </button>
           </div>
         </div>
 
-        {/* MOBİL MENÜ İÇERİĞİ */}
+        {/* MOBİL MENÜ */}
         <div
           className={`overflow-hidden bg-white transition-all duration-300 lg:hidden ${
             open
-              ? "max-h-[700px] border-t border-slate-200"
+              ? "max-h-[850px] border-t border-slate-200"
               : "max-h-0"
           }`}
         >
           <nav className="mx-auto max-w-7xl p-5">
             <div className="space-y-1">
               <a
-                href="#top"
+                href={`${homePath}#top`}
                 onClick={() => setOpen(false)}
                 className="block rounded-xl px-4 py-3 font-medium text-slate-800 hover:bg-slate-100"
               >
-                Ana Sayfa
+                {t.nav.home}
               </a>
 
               <a
-                href="#services"
+                href={`${homePath}#services`}
                 onClick={() => setOpen(false)}
                 className="block rounded-xl px-4 py-3 font-medium text-slate-800 hover:bg-slate-100"
               >
-                Hizmetler
+                {t.nav.services}
               </a>
 
               <a
-                href="#about"
+                href={`${homePath}#about`}
                 onClick={() => setOpen(false)}
                 className="block rounded-xl px-4 py-3 font-medium text-slate-800 hover:bg-slate-100"
               >
-                Hakkımızda
+                {t.nav.about}
               </a>
 
               <a
-                href="#contact"
+                href={`${homePath}#contact`}
                 onClick={() => setOpen(false)}
                 className="block rounded-xl px-4 py-3 font-medium text-slate-800 hover:bg-slate-100"
               >
-                İletişim
+                {t.nav.contact}
               </a>
             </div>
 
-            <div className="mt-4 rounded-2xl bg-slate-50 p-4">
+            {/* MOBİL DİL SEÇİCİ */}
+            <div className="mt-5">
+              <div className="mb-2 text-sm font-semibold text-slate-500">
+                Language
+              </div>
+
+              <div className="grid grid-cols-4 gap-2">
+                {languages.map((language) => (
+                  <Link
+                    key={language.code}
+                    href={language.href}
+                    onClick={() => setOpen(false)}
+                    className={`flex items-center justify-center rounded-xl px-2 py-3 text-sm font-bold transition ${
+                      locale === language.code
+                        ? "bg-sky-800 text-white"
+                        : "bg-slate-100 text-slate-700"
+                    }`}
+                  >
+                    {language.flag} {language.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-5 rounded-2xl bg-slate-50 p-4">
               <div className="mb-3 flex items-center gap-2">
                 <ShieldCheck
                   size={18}
@@ -208,15 +325,15 @@ export default function Header() {
                 />
 
                 <span className="font-bold text-slate-800">
-                  MEDİSU Güvencesi
+                  {t.header.assurance}
                 </span>
               </div>
 
               <div className="grid grid-cols-2 gap-2 text-sm text-slate-600">
-                <div>✓ Uzman Personel</div>
-                <div>✓ 39 İlçe</div>
-                <div>✓ Hijyenik Hizmet</div>
-                <div>✓ 7/24 İletişim</div>
+                <div>✓ {t.header.expertStaff}</div>
+                <div>✓ {t.header.districts}</div>
+                <div>✓ {t.header.hygiene}</div>
+                <div>✓ {t.header.contact24}</div>
               </div>
             </div>
 
@@ -236,7 +353,7 @@ export default function Header() {
                 className="flex items-center justify-center gap-2 rounded-2xl bg-sky-800 px-3 py-4 font-semibold text-white shadow-md transition hover:bg-sky-900"
               >
                 <Phone size={19} />
-                Hemen Ara
+                {t.nav.call}
               </a>
             </div>
           </nav>

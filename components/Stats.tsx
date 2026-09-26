@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Clock3,
@@ -8,34 +9,122 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const stats = [
-  {
-    icon: Clock3,
-    value: "7/24",
-    title: "İletişim",
-  },
-  {
-    icon: MapPinned,
-    value: "39",
-    title: "İlçe",
-  },
-  {
-    icon: ShieldCheck,
-    value: "%100",
-    title: "Hijyen",
-  },
-  {
-    icon: BadgeCheck,
-    value: "Uzman",
-    title: "Kadromuz",
-  },
-];
+import type { Locale } from "@/lib/translations";
+
+const statsContent = {
+  tr: [
+    {
+      icon: Clock3,
+      value: "7/24",
+      title: "İletişim",
+    },
+    {
+      icon: MapPinned,
+      value: "39",
+      title: "İlçe",
+    },
+    {
+      icon: ShieldCheck,
+      value: "%100",
+      title: "Hijyen",
+    },
+    {
+      icon: BadgeCheck,
+      value: "Uzman",
+      title: "Kadromuz",
+    },
+  ],
+
+  en: [
+    {
+      icon: Clock3,
+      value: "24/7",
+      title: "Contact",
+    },
+    {
+      icon: MapPinned,
+      value: "39",
+      title: "Districts",
+    },
+    {
+      icon: ShieldCheck,
+      value: "100%",
+      title: "Hygiene",
+    },
+    {
+      icon: BadgeCheck,
+      value: "Professional",
+      title: "Team",
+    },
+  ],
+
+  ar: [
+    {
+      icon: Clock3,
+      value: "24/7",
+      title: "التواصل",
+    },
+    {
+      icon: MapPinned,
+      value: "39",
+      title: "منطقة",
+    },
+    {
+      icon: ShieldCheck,
+      value: "100%",
+      title: "النظافة",
+    },
+    {
+      icon: BadgeCheck,
+      value: "متخصص",
+      title: "فريقنا",
+    },
+  ],
+
+  ru: [
+    {
+      icon: Clock3,
+      value: "24/7",
+      title: "Связь",
+    },
+    {
+      icon: MapPinned,
+      value: "39",
+      title: "Районов",
+    },
+    {
+      icon: ShieldCheck,
+      value: "100%",
+      title: "Гигиена",
+    },
+    {
+      icon: BadgeCheck,
+      value: "Опытная",
+      title: "Команда",
+    },
+  ],
+} as const;
 
 export default function Stats() {
-  return (
-    <section className="relative bg-white py-8 sm:py-10 lg:py-12">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+  const pathname = usePathname();
 
+  const firstSegment = pathname.split("/")[1];
+
+  const locale: Locale =
+    firstSegment === "en" ||
+    firstSegment === "ar" ||
+    firstSegment === "ru"
+      ? firstSegment
+      : "tr";
+
+  const stats = statsContent[locale];
+
+  return (
+    <section
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      className="relative bg-white py-8 sm:py-10 lg:py-12"
+    >
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {stats.map((item, index) => {
             const Icon = item.icon;
@@ -69,7 +158,6 @@ export default function Stats() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Phone,
@@ -10,56 +11,143 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: ShieldCheck,
-    title: "Uzman Sağlık Personeli",
+import {
+  translations,
+  type Locale,
+} from "@/lib/translations";
+
+const heroExtras = {
+  tr: {
+    features: [
+      {
+        icon: ShieldCheck,
+        title: "Uzman Sağlık Personeli",
+      },
+      {
+        icon: CheckCircle2,
+        title: "Steril ve Güvenli Uygulama",
+      },
+      {
+        icon: Clock3,
+        title: "7/24 İletişim",
+      },
+    ],
+    districtText: "İstanbul'un 39 İlçesinde Hizmet",
   },
-  {
-    icon: CheckCircle2,
-    title: "Steril ve Güvenli Uygulama",
+
+  en: {
+    features: [
+      {
+        icon: ShieldCheck,
+        title: "Professional Healthcare Staff",
+      },
+      {
+        icon: CheckCircle2,
+        title: "Sterile and Safe Care",
+      },
+      {
+        icon: Clock3,
+        title: "24/7 Contact",
+      },
+    ],
+    districtText: "Serving All 39 Districts of Istanbul",
   },
-  {
-    icon: Clock3,
-    title: "7/24 İletişim",
+
+  ar: {
+    features: [
+      {
+        icon: ShieldCheck,
+        title: "طاقم صحي متخصص",
+      },
+      {
+        icon: CheckCircle2,
+        title: "خدمة آمنة ومعقمة",
+      },
+      {
+        icon: Clock3,
+        title: "تواصل على مدار الساعة",
+      },
+    ],
+    districtText: "نقدم خدماتنا في جميع مناطق إسطنبول الـ 39",
   },
-];
+
+  ru: {
+    features: [
+      {
+        icon: ShieldCheck,
+        title: "Профессиональный медперсонал",
+      },
+      {
+        icon: CheckCircle2,
+        title: "Стерильное и безопасное обслуживание",
+      },
+      {
+        icon: Clock3,
+        title: "Связь 24/7",
+      },
+    ],
+    districtText: "Обслуживаем все 39 районов Стамбула",
+  },
+};
 
 export default function Hero() {
+  const pathname = usePathname();
+
+  const firstSegment = pathname.split("/")[1];
+
+  const locale: Locale =
+    firstSegment === "en" ||
+    firstSegment === "ar" ||
+    firstSegment === "ru"
+      ? firstSegment
+      : "tr";
+
+  const t = translations[locale];
+  const extra = heroExtras[locale];
+
   return (
     <section
       id="top"
+      dir={locale === "ar" ? "rtl" : "ltr"}
       className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50"
     >
       <div className="absolute -left-40 bottom-0 h-[360px] w-[360px] rounded-full bg-sky-100/60 blur-[120px]" />
+
       <div className="absolute -right-40 top-0 h-[360px] w-[360px] rounded-full bg-cyan-100/60 blur-[120px]" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-5 py-8 sm:px-6 sm:py-10 lg:grid-cols-2 lg:gap-16 lg:py-16">
 
         <motion.div
-          initial={{ opacity: 0, x: -25 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.55 }}
+          initial={{
+            opacity: 0,
+            x: locale === "ar" ? 25 : -25,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.55,
+          }}
         >
           <span className="inline-flex rounded-full bg-cyan-100 px-3.5 py-2 text-[11px] font-semibold text-cyan-700 sm:px-4 sm:text-sm">
-            İstanbul Geneli Evde Sağlık Hizmetleri
+            {t.hero.badge}
           </span>
 
           <h1 className="mt-4 text-[38px] font-extrabold leading-[1.05] tracking-tight text-slate-950 sm:text-5xl lg:mt-5 lg:text-6xl">
-            Sağlığınız
+            {t.hero.title1}
+
             <span className="mt-1 block text-sky-700">
-              Evinizin Konforunda
+              {t.hero.title2}
             </span>
           </h1>
 
           <p className="mt-4 max-w-xl text-[15px] leading-6 text-slate-600 sm:text-lg sm:leading-8 lg:mt-5">
-            İstanbul genelinde evde hemşire, serum, pansuman, kan alma,
-            yaşlı bakımı ve hasta bakımı hizmetlerini deneyimli sağlık
-            personelimizle güvenle sunuyoruz.
+            {t.hero.description}
           </p>
 
           <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-3 lg:mt-6">
-            {features.map((item) => {
+            {extra.features.map((item) => {
               const Icon = item.icon;
 
               return (
@@ -85,7 +173,8 @@ export default function Hero() {
               className="flex items-center justify-center gap-2 rounded-xl bg-sky-800 px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-sky-900 sm:px-7 sm:text-base"
             >
               <Phone size={18} />
-              Hemen Ara
+
+              {t.hero.call}
             </a>
 
             <a
@@ -95,15 +184,24 @@ export default function Hero() {
               className="flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-emerald-600 sm:px-7 sm:text-base"
             >
               <MessageCircle size={18} />
-              WhatsApp
+
+              {t.hero.whatsapp}
             </a>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
           className="relative mt-1 lg:mt-0"
         >
           <div className="absolute inset-0 scale-105 rounded-full bg-cyan-200/25 blur-[90px]" />
@@ -111,7 +209,7 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-[24px] border border-white/80 bg-white p-2 shadow-[0_20px_50px_rgba(15,23,42,.12)] sm:rounded-[32px] sm:p-3">
             <Image
               src="/images/hero.png"
-              alt="MEDİSU Evde Sağlık Hizmetleri"
+              alt="MEDİSU Home Healthcare Services"
               width={700}
               height={700}
               priority
@@ -120,7 +218,7 @@ export default function Hero() {
           </div>
 
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/80 bg-white/95 px-4 py-2 text-[11px] font-bold text-sky-800 shadow-lg backdrop-blur sm:bottom-5 sm:px-5 sm:py-3 sm:text-sm">
-            İstanbul&apos;un 39 İlçesinde Hizmet
+            {extra.districtText}
           </div>
         </motion.div>
 
